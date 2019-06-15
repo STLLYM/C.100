@@ -68,6 +68,18 @@ List sord(List a[N],int b)
 		}		
 	} 
 }
+List FREE(List head)
+{
+	List p,q;
+	p=head;
+	while(p->next!=NULL)
+	{
+		q=p->next;
+		free(p);
+		p=q;
+	}
+	return NULL; 
+}
 main()
 {
 	int i;
@@ -81,4 +93,5 @@ main()
 	{
 		printf("%d  ", a[i]->num);
 	}
+	FREE(ss);
 }
