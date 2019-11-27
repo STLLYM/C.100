@@ -123,84 +123,44 @@ main()
 {
 	BinTree p = NULL;
 	p = Creat();
+	printf("前序遍历:"); 
 	PreOrder(p);
  	printf("\n");
+ 	printf("中序遍历:"); 
  	InOrder(p);
  	printf("\n");
+ 	printf("后序遍历:"); 
 	Post(p);
-	printf("%d",sum);
+	printf("\n非叶子结点数:"); 
+	printf("\n%d",sum);
 }
-//#include<stdio.h>
-//#include<stdlib.h>
-//typedef struct node{
-// char data;
-// struct node *lchild, *rchild;
-//}*BinTree;
-//BinTree Creat(){
-// BinTree bt = NULL;
-// char s;
-// scanf("%c",&s);
-// if(s=='#'){
-//  bt = NULL;
-// }
-// else{
-//  bt = (BinTree)malloc(sizeof(struct node));
-//  bt->data = s;
-//  bt->lchild = Creat();
-//  bt->rchild = Creat();
-// }
-// return bt;
-//}
-////int PreOrder(BinTree bt)
-////{
-////    if(bt!=NULL)
-////    {
-////        int a = PreOrder(bt->lchild);
-////        int b = PreOrder(bt->rchild);
-////        if(a>b){
-////        	return a+1;
-////		}else{
-////			return b+1;
-////		}
-////    }
-////    return 0;
-////}
-//void PreOrder(BinTree bt)
+//void Post(BinTree root)
 //{
-//    if(bt!=NULL)
-//    {
-//        printf("%c",bt->data); 
-//        PreOrder(bt->lchild);
-//        PreOrder(bt->rchild);
-//    }
-//}
-//void PostOrder(BinTree bt)
-//{
-//    if(bt!=NULL)
-//    {
-//        PostOrder(bt->lchild);
-//        PostOrder(bt->rchild);
-//        printf("%c",bt->data);
-//    }
-//}
-//void InOrder(BinTree bt)
-//{
-//    if(bt!=NULL)
-//    {
-//        InOrder(bt->lchild);
-//        printf("%c",bt->data);
-//        InOrder(bt->rchild);
-//    }
-//}
-//main()
-//{
-// BinTree p = NULL;
-// p = Creat();
-// PreOrder(p);
-// printf("\n");
-// InOrder(p);
-// printf("\n");
-// PostOrder(p);
-//
+//	SeqStack s;
+//	BinTree p;
+//	BinTree q;
+//	s = InitStack();
+//	p = root;
+//	q = NULL;
+//	while(p!=NULL||!IsEmpty(s))
+//	{
+//		//ABC##DE#G##F###
+//		while(p!=NULL)
+//		{
+//			Push(s,p);
+//			p = p->lchild;
+//		}
+//		if(!IsEmpty(s))
+//		{
+//			p = Top(s);
+//			if((p->rchild==NULL)||(p->rchild==q))
+//			{
+//				Pop(s,p);
+//				q = p;
+//				p = NULL;
+//			}
+//			else p = p->rchild;
+//		}
+//	}
 //}
 
